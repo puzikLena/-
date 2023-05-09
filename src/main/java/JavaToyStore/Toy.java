@@ -1,16 +1,16 @@
 package JavaToyStore;
 
 public class Toy {
-    int id;
-    String name;
-    int amount;
-    float toyDropFrequency;
+    private int id;
+    private String name;
+    private int amount;
+    private int dropFrequency;
 
-    public Toy(int id, String name, int amount, float toyDropFrequency) {
+    public Toy(int id, String name, int amount, int dropFrequency) {
         this.id = id;
         this.name = name;
         this.amount = amount;
-        this.toyDropFrequency = toyDropFrequency;
+        this.dropFrequency = dropFrequency;
 
     }
 
@@ -20,7 +20,7 @@ public class Toy {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", amount=" + amount +
-                ", toyDropFrequency=" + toyDropFrequency +
+                ", toyDropFrequency=" + dropFrequency +
                 '}';
     }
 
@@ -36,11 +36,15 @@ public class Toy {
         return amount;
     }
 
-    public float getToyDropFrequency() {
-        return toyDropFrequency;
+    public int getDropFrequency() {
+        return dropFrequency;
     }
 
-    public void setToyDropFrequency(float toyDropFrequency) {
-        this.toyDropFrequency = toyDropFrequency;
+    public void setDropFrequency(int dropFrequency) {
+        this.dropFrequency = dropFrequency;
+    }
+
+    public void decreaseAmount() {
+        amount--;
     }
 }
